@@ -1,50 +1,81 @@
-# Virtual-Assistant
+# 🏋️ Gestor de Agenda y Rutinas con Asistente IA
 
-This template should help get you started developing with Vue 3 in Vite.
+Sistema inteligente para la gestión de rutinas de ejercicio y actividades diarias, potenciado con un asistente de IA local que ofrece recomendaciones personalizadas basadas en tu perfil (edad, nombre y ocupación).
 
-## Recommended IDE Setup
+## 🎯 Descripción General
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+El **Gestor de Agenda y Rutinas** es una aplicación web progresiva que permite a los usuarios organizar, gestionar y dar seguimiento a sus rutinas de ejercicio y actividades diarias. Lo que hace único a este sistema es su **asistente de IA local** (basado en Ollama) que analiza el perfil del usuario (nombre, edad y ocupación) para ofrecer recomendaciones personalizadas y consejos adaptados a su estilo de vida.
 
-## Recommended Browser Setup
+## ❌ Problema que Resuelve
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+### Problemáticas Identificadas:
+1. **Falta de personalización**: Las aplicaciones de rutinas genéricas no consideran factores como la edad u ocupación del usuario.
+2. **Desorganización**: Los usuarios suelen mezclar rutinas de ejercicio con actividades personales sin una herramienta unificada.
+3. **Falta de seguimiento**: No hay un registro histórico de las rutinas realizadas ni estadísticas semanales.
+4. **Barrera tecnológica**: Las soluciones existentes son complejas o requieren conocimientos técnicos avanzados.
 
-## Customize configuration
+### Nuestra Solución:
+- ✅ **IA Local** (Ollama): Todo el procesamiento de IA se realiza en tu máquina.
+- ✅ **Personalización inteligente**: El asistente IA analiza tu edad, ocupación y nombre para darte consejos relevantes.
+- ✅ **Gestión unificada**: Calendario, rutinas y actividades en un solo lugar.
+- ✅ **Seguimiento automático**: Registro de días entrenados y rutinas realizadas por semana.
+- ✅ **Interfaz intuitiva**: Diseñada con Vue y Tailwind CSS para máxima usabilidad.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## ✨ Características Principales
 
-## Project Setup
+### 1. 📅 **Vista Principal (Main)**
+- Calendario interactivo para visualizar tus rutinas por fecha
+- Resumen semanal con horas disponibles
+- Estadísticas de rutinas realizadas en la semana actual
+- Acceso rápido a la creación de nuevas rutinas
 
-```sh
-npm install
-```
+### 2. 📝 **Gestión de Rutinas**
+- Crear, editar y eliminar rutinas de ejercicio
+- Cada rutina puede contener múltiples ejercicios
+- Asignar rutinas a fechas específicas en el calendario
+- Visualización detallada de cada rutina (series, repeticiones, duración)
 
-### Compile and Hot-Reload for Development
+### 3. 🎯 **Sección de Actividades**
+- Gestión de actividades diarias no relacionadas con ejercicio
+- Organización por fecha y prioridad
+- Seguimiento de actividades completadas/pendientes
 
-```sh
-npm run dev
-```
+### 4. 🤖 **Asistente IA (Local)**
+- Chat interactivo con IA que se ejecuta localmente (Ollama)
+- Recomendaciones personalizadas basadas en:
+  - **Nombre**: Trato personalizado y amigable
+  - **Edad**: Adaptación de intensidad y tipo de ejercicios
+  - **Ocupación**: Sugerencias según estilo de vida (estudiante, empleado, emprendedor, etc.)
+- Sin necesidad de conexión a internet (una vez instalado Ollama)
+- Privacidad garantizada: los datos nunca salen de tu computadora
 
-### Compile and Minify for Production
+### 5. 👤 **Perfil de Usuario**
+- Registro de datos personales (nombre, edad, ocupación)
+- Persistencia de datos con localStorage
+- Opción de eliminar todos los datos del sistema
 
-```sh
-npm run build
-```
+## 🛠 Tecnologías Utilizadas
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### Frontend
+| Tecnología | Versión | Propósito |
+|------------|---------|------------|
+| **Vue.js 3** | ^3.3.0 | Framework progresivo para la interfaz de usuario |
+| **Pinia** | ^2.1.0 | Manejo del estado global de la aplicación |
+| **Vue Router** | ^4.2.0 | Enrutamiento y navegación entre vistas |
+| **Tailwind CSS** | ^3.3.0 | Framework de CSS utilitario para diseño responsive |
+| **Heroicons** | ^2.0.0 | Iconos SVG profesionales |
 
-```sh
-npm run test:unit
-```
+### IA y Procesamiento Local
+| Tecnología | Propósito |
+|------------|------------|
+| **Ollama** | Servidor de IA local que ejecuta modelos como Llama 2, Mistral, etc. |
+| **Modelo Recomendado** | `llama2` o `mistral` (7B parameters) |
 
-### Lint with [ESLint](https://eslint.org/)
+### Persistencia y Almacenamiento
+- **localStorage**: Almacenamiento local de datos del usuario y rutinas
+- **API Fetch**: Comunicación con el servidor local de Ollama
 
-```sh
-npm run lint
-```
+### Herramientas de Desarrollo
+- **Vite**: Bundler ultrarrápido para desarrollo
+- **ESLint**: Linting de código JavaScript/Vue
+
